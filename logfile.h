@@ -4,4 +4,4 @@
 #include <sys/sysinfo.h>
 
 void printLog(const char *level, const char *description);
-void obtenerHoraFecha(const char *comando, char *buffer, size_t size);
+void traducirComando(const char *comando, char *buffer, size_t size);

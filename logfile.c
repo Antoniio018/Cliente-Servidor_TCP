@@ -15,7 +15,7 @@ void printLog(const char *level, const char *description) {
         printf("Error al abrir el archivo de registro");
     }
 }
-void obtenerHoraFecha(const char *comando, char *buffer, size_t size){
+void traducirComando(const char *comando, char *buffer, size_t size){
     time_t now = time(0);
     struct tm *local_time = localtime(&now);
     struct sysinfo info;

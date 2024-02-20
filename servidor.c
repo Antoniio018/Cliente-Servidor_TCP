@@ -122,7 +122,7 @@ int main(void){
                     snprintf(respuesta, sizeof(respuesta), "Servidor apagado");
                 }else{
                     //Comprueba el formato de los datos recibidos y devuelve una respuesta
-                    obtenerHoraFecha(buffer, respuesta, sizeof(respuesta));
+                    traducirComando(buffer, respuesta, sizeof(respuesta));
                     printf("[RESPUESTA] -> %s\n", respuesta);
                 }                
                 //Enviando respuesta al cliente
