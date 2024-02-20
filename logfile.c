@@ -38,14 +38,49 @@ void obtenerHoraFecha(const char *comando, char *buffer, size_t size){
         strftime(buffer, size, "%d/%m", local_time);
     } else if (strcmp(comando, "[GET_DATE][FORMAT_F]") == 0) {
         strftime(buffer, size, "%d/%m/%Y", local_time);
-
-    //10 para comparar el principio del comando y saber que se refiere
+    } else if (strcmp(comando, "[GET_NPROC]") == 0) {
+        struct sysinfo info;
+        sysinfo(&info);
+        snprintf(buffer, size, "Número de procesos activos: %d", info.procs);
+    } else if (strcmp(comando, "[GET_MEMLOAD]") == 0) {
+        struct sysinfo info;
+        sysinfo(&info);
+        long totalram = info.totalram;
+        long freeram = info.freeram;
+        long ram = (totalram - freeram) * 100 / totalram;
+        snprintf(buffer, size, "Memoria ram usada (%): %ld", ram);
+    } else if (strcmp(comando, "[GET_UPTIME]") == 0) {
+        struct sysinfo info;
+        sysinfo(&info);
+        long tiempo = info.uptime;
+        snprintf(buffer, size, "Tiempo en segundos: %ld", tiempo); 
+    //10 para comparar el principio del comando y saber que se refiere printf("Memoria ram usada en porcentaje:%ld\n", (totalram - freeram) * 100 / totalram);
     //a un formato de hora o fecha pero se ha equivocado con el comando completo
     } else if (strncmp(comando, "[GET_HOUR]", 10) == 0) {
-        snprintf(buffer, size, "Formato de hora no reconocido");
+        //Formato de hora no reconocido
+        snprintf(buffer, size, "[ERROR][HOUR]");
     } else if (strncmp(comando, "[GET_DATE]", 10) == 0) {
-        snprintf(buffer, size, "Formato de fecha no reconocido");
+        //Formato de fecha no reconocido
+        snprintf(buffer, size, "[ERROR][DATE]");
     } else{
-        snprintf(buffer, size, "Comando no reconocido");
+        //Comando no reconocido
+        snprintf(buffer, size, "[ERROR][NO_SUPPORT]");
     }
 }
+/* https://manpages.ubuntu.com/manpages/trusty/es/man2/sysinfo.2.html 
+    struct sysinfo {
+                    long uptime;              // Segundos desde el arranque 
+                    unsigned long loads[3];   // cargas medias en 1, 5, y 15 min 
+                    unsigned long totalram;   // Mem. pral. total útil 
+                    unsigned long freeram;    // Tamaño de memoria disponible 
+                    unsigned long sharedram;  // Cantidad de memoria compartida 
+                    unsigned long bufferram;  // Memoria empleaada por búferes 
+                    unsigned long totalswap;  // Tamaño del espacio total de swap 
+                    unsigned long freeswap;   // Espacio de swap aún disponible 
+                    unsigned short procs;     // Nº de procesos actualmente 
+                    unsigned long totalhigh;  // Tamaño total de memoria alta 
+                    unsigned long freehigh;   // Tamaño disponible de memoria alta 
+                    unsigned int mem_unit;    // Tamaño de la unidad de memoria en bytes 
+                    char _f[20-2*sizeof(long)-sizeof(int)]; // Relleno para libc5 
+    }
+*/
