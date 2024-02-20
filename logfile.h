@@ -3,4 +3,4 @@
 #include <string.h>
 
 void printLog(const char *level, const char *description);
-void obtenerHoraFecha(const char *comando, char *buffer, size_t tamano);
+void obtenerHoraFecha(const char *comando, char *buffer, size_t size);

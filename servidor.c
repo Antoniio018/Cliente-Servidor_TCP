@@ -115,13 +115,12 @@ int main(void){
                 //Muestra datos
                 printf("[DATOS] -> %s\n", buffer);
 
-                //Explorar los datos recibidos y verificar el formato
-                //hacer una función para ver el buffer y determinar 
-                //si la trama es correcta o no
+                //Comprueba el formato de los datos recibidos y devuelve una respuesta
                 char respuesta[TAM_BUFFER];
                 obtenerHoraFecha(buffer, respuesta, sizeof(respuesta));
                 printf("[RESPUESTA] -> %s\n", respuesta);
-                //Falta enviar la respuesta al cliente
+                
+                //Enviando respuesta al cliente
                 write(sockdata, respuesta, strlen(respuesta));
             }
 

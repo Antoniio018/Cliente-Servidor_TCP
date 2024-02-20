@@ -15,7 +15,7 @@ void printLog(const char *level, const char *description) {
         printf("Error al abrir el archivo de registro");
     }
 }
-void obtenerHoraFecha(const char *comando, char *buffer, size_t tamano){
+void obtenerHoraFecha(const char *comando, char *buffer, size_t size){
     time_t now = time(0);
     struct tm *local_time = localtime(&now);
 
@@ -31,12 +31,21 @@ void obtenerHoraFecha(const char *comando, char *buffer, size_t tamano){
     */
     //size_t strftime(char *s, size_t max, const char *format, const struct tm *timeptr)
     if (strcmp(comando, "[GET_HOUR][FORMAT_12H]") == 0) {
-        strftime(buffer, tamano, "%I:%M:%S %p", local_time);
+        strftime(buffer, size, "%I:%M:%S %p", local_time);
     } else if (strcmp(comando, "[GET_HOUR][FORMAT_24H]") == 0) {
-        strftime(buffer, tamano, "%H:%M:%S", local_time);
+        strftime(buffer, size, "%H:%M:%S", local_time);
     } else if (strcmp(comando, "[GET_DATE][FORMAT_H]") == 0) {
-        strftime(buffer, tamano, "%d/%m", local_time);
+        strftime(buffer, size, "%d/%m", local_time);
     } else if (strcmp(comando, "[GET_DATE][FORMAT_F]") == 0) {
-        strftime(buffer, tamano, "%d/%m/%Y", local_time);
+        strftime(buffer, size, "%d/%m/%Y", local_time);
+
+    //10 para comparar el principio del comando y saber que se refiere
+    //a un formato de hora o fecha pero se ha equivocado con el comando completo
+    } else if (strncmp(comando, "[GET_HOUR]", 10) == 0) {
+        snprintf(buffer, size, "Formato de hora no reconocido");
+    } else if (strncmp(comando, "[GET_DATE]", 10) == 0) {
+        snprintf(buffer, size, "Formato de fecha no reconocido");
+    } else{
+        snprintf(buffer, size, "Comando no reconocido");
     }
 }
