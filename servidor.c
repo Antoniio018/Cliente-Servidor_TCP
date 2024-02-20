@@ -10,7 +10,11 @@
     ....
     ....
 */
-
+/*
+    gcc -c logfile.c -o logfile.o
+    gcc -c servidor.c -o servidor.o
+    gcc logfile.o servidor.o -o servidor
+*/
 #include "logfile.h"
 
 #include <sys/types.h>
@@ -63,6 +67,7 @@ int main(void){
     printf("Servidor funcionando...\n");
     printf("Direccion IP : %s\n", inet_ntoa(name.sin_addr));
     printf("Puerto : %d\n", ntohs(name.sin_port));
+    printLog("NOTIFY", "Se ha iniciado el servidor");
 
     /* Enlaza los datos de conexión con el socket */
     if(bind(socksvr,(struct sockaddr *) &name, sizeof(name)) < 0){
@@ -77,7 +82,7 @@ int main(void){
     /* Ciclo de servicio*/
     for(;;){
         //al log
-        printLog("NOTIFY", "Se ha iniciado el servidor");
+        printLog("NOTIFY", "Servidor en espera de conexión");
         printf("esperando conexiones...\n");
 
         // Aceptar la conexión y pasa al cliente a otro socket (datos)
@@ -104,13 +109,20 @@ int main(void){
             else{
                 printf("Conexión establecida.\n");
 
+                //¿¿Se podria escribir algun dato del cliente??
+                printLog("NOTIFY", "Conexión establecida con el servidor");
+
                 //Muestra datos
                 printf("[DATOS] -> %s\n", buffer);
 
-                // Explorar los datos recibidos y verificar el formato
+                //Explorar los datos recibidos y verificar el formato
                 //hacer una función para ver el buffer y determinar 
                 //si la trama es correcta o no
-
+                char respuesta[TAM_BUFFER];
+                obtenerHoraFecha(buffer, respuesta, sizeof(respuesta));
+                printf("[RESPUESTA] -> %s\n", respuesta);
+                //Falta enviar la respuesta al cliente
+                write(sockdata, respuesta, strlen(respuesta));
             }
 
             //Cierre conexión cliente

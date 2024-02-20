@@ -30,6 +30,8 @@ int main(int argc, char **argv){
     int sock;
     struct sockaddr_in name;
     struct hostent *host;
+    char buffer[TAM_BUFFER];
+    int datos_leidos;
 
     /* Controla los argumentos pasados*/
     if(argc != 4){
@@ -73,6 +75,16 @@ int main(int argc, char **argv){
             //Cliente espera la respuesta del servidor
             //llamada a la funcion read()
             //Explora la respuesta(en función de la petición )
+            
+            memset(buffer, '\0', TAM_BUFFER);
+
+            //Hay que leer del socket para identificar el tipo de petición
+            datos_leidos = read(sock, buffer, TAM_BUFFER);
+            if(datos_leidos < 0)
+                perror("En respuesta del servidor\n");
+            else
+                printf("[SERVIDOR] -> %s\n", buffer);
+            
         }
     }
     
