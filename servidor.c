@@ -11,7 +11,8 @@
     ....
 */
 
-#include <stdio.h>
+#include "logfile.h"
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
@@ -24,6 +25,8 @@
 #define ERROR_NO_OPEN_SOCKET -1
 #define ERROR_CORRECT_ARGUMENTS -2
 #define ERROR_NOT_FOUND_SERVER -3
+#define ERROR_NOT_LINKED_DATA_SOCKET -4
+#define ERROR_NO_CONNECT_CLIENT -5
 
 /*Tamaño en bytes*/
 #define TAM_BUFFER 1024
@@ -47,7 +50,7 @@ int main(void){
     socksvr = socket(PF_INET, SOCK_STREAM, 0);
     if(socksvr < 0){
         perror("En socket server...\n");
-        //logfile->write("[ERROR]", "No se puede abrir un socket");
+        printLog("ERROR", "No se puede abrir un socket");
         return ERROR_NO_OPEN_SOCKET;
     }
 
@@ -64,8 +67,8 @@ int main(void){
     /* Enlaza los datos de conexión con el socket */
     if(bind(socksvr,(struct sockaddr *) &name, sizeof(name)) < 0){
         perror("Error en datos del socket\n");
-        //logfile->write("[ERROR]", "No se puede enlazar los datos al socket");
-        return -4; // hacer otra constante
+        printLog("ERROR", "No se puede enlazar los datos al socket");
+        return ERROR_NOT_LINKED_DATA_SOCKET;
     }
 
     //Pone al socket en modo de escucha
@@ -74,6 +77,7 @@ int main(void){
     /* Ciclo de servicio*/
     for(;;){
         //al log
+        printLog("NOTIFY", "Se ha iniciado el servidor");
         printf("esperando conexiones...\n");
 
         // Aceptar la conexión y pasa al cliente a otro socket (datos)
@@ -81,8 +85,9 @@ int main(void){
 
         if(sockdata < 0){
             //Log
+            printLog("ERROR", "Conexión con el cliente fallida");
             perror("Error en conexión con el cliente\n");
-            return -5;
+            return ERROR_NO_CONNECT_CLIENT;
         }
         else{
             //Socket cliente válido
@@ -93,7 +98,7 @@ int main(void){
             //Hay que leer del socket para identificar el tipo de petición
             datos_leidos = read(sockdata, buffer, TAM_BUFFER);
             if(datos_leidos < 0){
-                //log
+                printLog("ERROR", "Petición cliente fallida");
                 perror("en petición cliente\n");
             }
             else{
