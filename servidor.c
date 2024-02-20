@@ -46,10 +46,10 @@ int main(void){
     int sockdata;
 
     int datos_leidos;
-
+    bool ok = true;
     struct sockaddr_in name;
     char buffer[TAM_BUFFER];
-
+    char respuesta[TAM_BUFFER];
     /* Abre el socket de escucha */
     socksvr = socket(PF_INET, SOCK_STREAM, 0);
     if(socksvr < 0){
@@ -80,7 +80,7 @@ int main(void){
     listen(socksvr, 1); //Numero conexiones de escucha, parametro para configuar en el ini
 
     /* Ciclo de servicio*/
-    for(;;){
+    while(ok){
         //al log
         printLog("NOTIFY", "Servidor en espera de conexión");
         printf("esperando conexiones...\n");
@@ -115,11 +115,16 @@ int main(void){
                 //Muestra datos
                 printf("[DATOS] -> %s\n", buffer);
 
-                //Comprueba el formato de los datos recibidos y devuelve una respuesta
-                char respuesta[TAM_BUFFER];
-                obtenerHoraFecha(buffer, respuesta, sizeof(respuesta));
-                printf("[RESPUESTA] -> %s\n", respuesta);
-                
+                //Comprueba si el comando recibido es para apagar el servidor   
+                if (strcmp(buffer, "[quit]") == 0) {
+                    ok = false;
+                    printLog("NOTIFY", "Servidor apagado");
+                    snprintf(respuesta, sizeof(respuesta), "Servidor apagado");
+                }else{
+                    //Comprueba el formato de los datos recibidos y devuelve una respuesta
+                    obtenerHoraFecha(buffer, respuesta, sizeof(respuesta));
+                    printf("[RESPUESTA] -> %s\n", respuesta);
+                }                
                 //Enviando respuesta al cliente
                 write(sockdata, respuesta, strlen(respuesta));
             }

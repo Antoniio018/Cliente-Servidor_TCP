@@ -18,7 +18,8 @@ void printLog(const char *level, const char *description) {
 void obtenerHoraFecha(const char *comando, char *buffer, size_t size){
     time_t now = time(0);
     struct tm *local_time = localtime(&now);
-
+    struct sysinfo info;
+    sysinfo(&info);
     /*
         %Y para el año con cuatro dígitos
         %m para el mes en formato numérico
@@ -39,21 +40,14 @@ void obtenerHoraFecha(const char *comando, char *buffer, size_t size){
     } else if (strcmp(comando, "[GET_DATE][FORMAT_F]") == 0) {
         strftime(buffer, size, "%d/%m/%Y", local_time);
     } else if (strcmp(comando, "[GET_NPROC]") == 0) {
-        struct sysinfo info;
-        sysinfo(&info);
         snprintf(buffer, size, "Número de procesos activos: %d", info.procs);
     } else if (strcmp(comando, "[GET_MEMLOAD]") == 0) {
-        struct sysinfo info;
-        sysinfo(&info);
         long totalram = info.totalram;
         long freeram = info.freeram;
         long ram = (totalram - freeram) * 100 / totalram;
-        snprintf(buffer, size, "Memoria ram usada (%): %ld", ram);
+        snprintf(buffer, size, "Memoria ram usada (En porcentaje): %ld", ram);
     } else if (strcmp(comando, "[GET_UPTIME]") == 0) {
-        struct sysinfo info;
-        sysinfo(&info);
-        long tiempo = info.uptime;
-        snprintf(buffer, size, "Tiempo en segundos: %ld", tiempo); 
+        snprintf(buffer, size, "Tiempo en segundos: %ld", info.uptime); 
     //10 para comparar el principio del comando y saber que se refiere printf("Memoria ram usada en porcentaje:%ld\n", (totalram - freeram) * 100 / totalram);
     //a un formato de hora o fecha pero se ha equivocado con el comando completo
     } else if (strncmp(comando, "[GET_HOUR]", 10) == 0) {
