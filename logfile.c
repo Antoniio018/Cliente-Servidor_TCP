@@ -1,5 +1,16 @@
 #include "logfile.h"
-
+Config readIni(){
+    Config config;
+    FILE *file = fopen("config.ini", "r");
+    if (file != NULL) {
+        char line[LINE_SIZE];
+        while(fgets(line, LINE_SIZE, file) != NULL) {
+            
+        }
+    }
+    fclose(file);
+    return config;
+}
 void printLog(const char *level, const char *description) {
     time_t now = time(0);
     char date_hour[25];
@@ -56,7 +67,7 @@ void traducirComando(const char *comando, char *buffer, size_t size){
     } else if (strncmp(comando, "[GET_DATE]", 10) == 0) {
         //Formato de fecha no reconocido
         snprintf(buffer, size, "[ERROR][DATE]");
-    } else{
+    } else {
         //Comando no reconocido
         snprintf(buffer, size, "[ERROR][NO_SUPPORT]");
     }
