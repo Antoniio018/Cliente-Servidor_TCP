@@ -17,26 +17,6 @@
 */
 #include "logfile.h"
 
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netdb.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-/* Tabla de errores*/
-#define ERROR_NO_OPEN_SOCKET -1
-#define ERROR_CORRECT_ARGUMENTS -2
-#define ERROR_NOT_FOUND_SERVER -3
-#define ERROR_NOT_LINKED_DATA_SOCKET -4
-#define ERROR_NO_CONNECT_CLIENT -5
-
-/*Tamaño en bytes*/
-#define TAM_BUFFER 1024
-
-/* Tipo bool */
-typedef enum{false = 0, true} bool;
 
 int main(void){
     /* Socket de escucha*/
@@ -50,6 +30,7 @@ int main(void){
     struct sockaddr_in name;
     char buffer[TAM_BUFFER];
     char respuesta[TAM_BUFFER];
+
     /* Abre el socket de escucha */
     socksvr = socket(PF_INET, SOCK_STREAM, 0);
     if(socksvr < 0){
@@ -58,10 +39,23 @@ int main(void){
         return ERROR_NO_OPEN_SOCKET;
     }
 
+    /* Lee los datos del fichero .ini */
+    Config config = readIni();
+
     /* Asigna los parámetros de conexión al socket */
+    /* 
+        Si en el fichero .ini pone local host selecciona una IP Local,
+        en caso contrario, selecciona la IP propuesta en el .ini
+    */
+    if(strcmp(config.host, "localhost") == 0){
+        name.sin_addr.s_addr = htonl(INADDR_ANY);
+    }else{
+        struct in_addr addr;
+        inet_aton(config.host, &addr);
+        name.sin_addr = addr;
+    }
     name.sin_family = AF_INET;
-    name.sin_addr.s_addr = htonl(INADDR_ANY); //INADDR_ANY iria lo que diga el ini
-    name.sin_port = htons(1223);//el puerto sería tb lo que diga el ini
+    name.sin_port = htons(config.port);
 
     /* Servidor está activo */
     printf("Servidor funcionando...\n");
@@ -110,6 +104,16 @@ int main(void){
                 printf("Conexión establecida.\n");
 
                 //¿¿Se podria escribir algun dato del cliente??
+                // if(getpeername(sockdata, (struct sockaddr *)&name, (socklen_t *)&name) < 0){
+                //     // perror("Error al obtener direccion del cliente\n");
+                //     // printLog("ERROR", "Error al obtener direccion del cliente");
+                //     // return ERROR_NOT_FOUND_CLIENT_DATA;
+                // }
+                // else{
+                //     printf("Dirección del cliente: %s:%d\n",
+                //     inet_ntoa(name.sin_addr), ntohs(name.sin_port));
+                // }
+
                 printLog("NOTIFY", "Conexión establecida con el servidor");
 
                 //Muestra datos

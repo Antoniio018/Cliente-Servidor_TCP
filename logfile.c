@@ -1,16 +1,36 @@
 #include "logfile.h"
+
+
 Config readIni(){
     Config config;
+    char *token;
     FILE *file = fopen("config.ini", "r");
     if (file != NULL) {
         char line[LINE_SIZE];
-        while(fgets(line, LINE_SIZE, file) != NULL) {
-            
+        while(fgets(line, LINE_SIZE, file)!= NULL) {
+            char *ptr;
+            printf("%s", line);
+            if ((ptr = strstr(line, "host =")) != NULL) {
+                char *token = strtok(ptr + strlen("host ="), "\"\n");
+                if (token != NULL) {
+                    if(strcmp("localhost","token") == 0)
+                        strcpy(config.host,"127.0.0.1");
+                    else
+                        strcpy(config.host, token);
+                }
+            }
+            else if((ptr = strstr(line, "port =")) != NULL) {
+                char *port = strtok(ptr + strlen("port ="), "\"\n");
+                if (port != NULL) {
+                    config.port = atoi(port);
+                }
+            }
         }
     }
     fclose(file);
     return config;
 }
+
 void printLog(const char *level, const char *description) {
     time_t now = time(0);
     char date_hour[25];
