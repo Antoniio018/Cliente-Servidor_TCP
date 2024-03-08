@@ -51,3 +51,220 @@
 [20/02/2024] [17:36:52] - [NOTIFY] - Servidor en espera de conexión
 [20/02/2024] [17:37:00] - [NOTIFY] - Conexión establecida con el servidor
 [20/02/2024] [17:37:00] - [NOTIFY] - Servidor apagado
+[21/02/2024] [08:43:20] - [NOTIFY] - Se ha iniciado el servidor
+[21/02/2024] [08:43:20] - [NOTIFY] - Servidor en espera de conexión
+[21/02/2024] [08:44:16] - [NOTIFY] - Conexión establecida con el servidor
+[21/02/2024] [08:44:16] - [NOTIFY] - Servidor en espera de conexión
+[21/02/2024] [08:44:26] - [NOTIFY] - Conexión establecida con el servidor
+[21/02/2024] [08:44:26] - [NOTIFY] - Servidor en espera de conexión
+[21/02/2024] [08:44:40] - [NOTIFY] - Conexión establecida con el servidor
+[21/02/2024] [08:44:40] - [NOTIFY] - Servidor en espera de conexión
+[21/02/2024] [08:44:49] - [NOTIFY] - Conexión establecida con el servidor
+[21/02/2024] [08:44:49] - [NOTIFY] - Servidor en espera de conexión
+[21/02/2024] [08:45:59] - [NOTIFY] - Conexión establecida con el servidor
+[21/02/2024] [08:45:59] - [NOTIFY] - Servidor apagado
+[22/02/2024] [16:27:18] - [NOTIFY] - Se ha iniciado el servidor
+[22/02/2024] [16:27:18] - [NOTIFY] - Servidor en espera de conexión
+[22/02/2024] [16:28:20] - [NOTIFY] - Conexión establecida con el servidor
+[22/02/2024] [16:28:20] - [NOTIFY] - Servidor en espera de conexión
+[22/02/2024] [16:33:53] - [NOTIFY] - Se ha iniciado el servidor
+[22/02/2024] [16:33:53] - [NOTIFY] - Servidor en espera de conexión
+[22/02/2024] [16:33:59] - [NOTIFY] - Conexión establecida con el servidor
+[22/02/2024] [16:33:59] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [09:46:04] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [09:46:04] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [09:47:27] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [09:47:27] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [09:57:17] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [09:57:17] - [NOTIFY] - Servidor apagado
+[07/03/2024] [11:12:28] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:12:28] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:12:58] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:12:58] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:13:17] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [11:13:17] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:13:23] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [11:13:23] - [NOTIFY] - Servidor apagado
+[07/03/2024] [11:14:42] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:14:42] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:14:56] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:14:56] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:15:11] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:15:11] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:15:40] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:15:40] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:16:19] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:16:19] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:16:29] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:16:29] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:16:39] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:16:39] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:16:47] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:16:47] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:17:46] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:17:46] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:01] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:01] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:13] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:13] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:16] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:16] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:17] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:17] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:18] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:18] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:18:20] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:20] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:18:21] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:21] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:18:23] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:23] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:18:26] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:18:26] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:20:22] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:20:22] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:20:25] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:20:25] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:20:30] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:20:30] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:20:32] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:20:32] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:18] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:18] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:21] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:21] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:22] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:22] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:24] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:24] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:25] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:25] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:26] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:26] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:44] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:44] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:46] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:46] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:47] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:47] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:21:48] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:48] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:49] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:49] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:51] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:51] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:52] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:52] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:53] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:53] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:53] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:53] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:21:54] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:21:54] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:22:43] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:43] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:22:46] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:46] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [11:22:47] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:47] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:22:50] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:50] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:22:52] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:52] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:22:52] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:52] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:22:54] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:54] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [11:22:54] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [11:22:54] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:07:16] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:07:16] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:07:18] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:07:18] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:07:22] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:07:22] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:07:23] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:07:23] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:07:24] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:07:24] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:09:21] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:09:21] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:23:02] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:23:02] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:24:30] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:24:30] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:26:23] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:26:23] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [12:26:37] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:26:37] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [12:27:03] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:27:03] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:27:08] - [ERROR] - Error al obtener direccion del cliente
+[07/03/2024] [12:27:39] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:27:39] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [12:27:49] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:27:49] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [12:27:56] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:27:56] - [ERROR] - No se puede enlazar los datos al socket
+[07/03/2024] [12:31:16] - [NOTIFY] - Se ha iniciado el servidor
+[07/03/2024] [12:31:16] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:31:48] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [12:31:48] - [NOTIFY] - Servidor en espera de conexión
+[07/03/2024] [12:32:22] - [NOTIFY] - Conexión establecida con el servidor
+[07/03/2024] [12:32:22] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:02:01] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:02:01] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:02:21] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:02:21] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:03:39] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:03:39] - [NOTIFY] - Servidor apagado
+[08/03/2024] [09:03:52] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:03:52] - [ERROR] - No se puede enlazar los datos al socket
+[08/03/2024] [09:04:15] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:04:15] - [ERROR] - No se puede enlazar los datos al socket
+[08/03/2024] [09:04:16] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:04:16] - [ERROR] - No se puede enlazar los datos al socket
+[08/03/2024] [09:04:17] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:04:17] - [ERROR] - No se puede enlazar los datos al socket
+[08/03/2024] [09:04:18] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:04:18] - [ERROR] - No se puede enlazar los datos al socket
+[08/03/2024] [09:04:54] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:04:54] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:05:02] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:05:02] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:06:17] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:06:17] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:06:21] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:06:21] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:09:53] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:09:53] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:09:58] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:09:58] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:11:17] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:11:17] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:11:20] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:11:20] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:14:22] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:14:22] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:14:26] - [NOTIFY] - Conexión establecida con el servidor
+[08/03/2024] [09:14:26] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:27:25] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:27:25] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:29:30] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:29:30] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:29:33] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:30:35] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:30:35] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:30:37] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:33:14] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:33:14] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:33:17] - [NOTIFY] - Conexión establecida con el servidor IP: 127.0.0.1
+[08/03/2024] [09:33:17] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:44:34] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:44:34] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:54:19] - [NOTIFY] - Se ha iniciado el servidor
+[08/03/2024] [09:54:19] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:58:16] - [NOTIFY] - Conexión establecida con el servidor IP: 192.168.13.80
+[08/03/2024] [09:58:16] - [NOTIFY] - Servidor en espera de conexión
+[08/03/2024] [09:59:38] - [NOTIFY] - Conexión establecida con el servidor IP: 192.168.13.80
+[08/03/2024] [09:59:38] - [NOTIFY] - Servidor apagado
