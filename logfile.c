@@ -31,7 +31,7 @@ Config readIni(){
     return config;
 }
 
-void printLog(const char *level, const char *description) {
+void printLog(const char *level, const char *msg) {
     time_t now = time(0);
     char date_hour[25];
     struct tm *local_time = localtime(&now);
@@ -39,8 +39,8 @@ void printLog(const char *level, const char *description) {
 
     FILE *file = fopen("log.txt", "a");
     if (file != NULL) {
-        fprintf(file, "%s - [%s] - %s\n", date_hour, level, description);
-        printf("%s - [%s] - %s\n", date_hour, level, description);
+        fprintf(file, "%s - [%s] - %s\n", date_hour, level, msg);
+        printf("%s - [%s] - %s\n", date_hour, level, msg);
         fclose(file);
     } else {
         printf("Error al abrir el archivo de registro");

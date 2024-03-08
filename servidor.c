@@ -17,7 +17,6 @@
 */
 #include "logfile.h"
 
-
 int main(void){
     /* Socket de escucha*/
     int socksvr;
@@ -83,7 +82,6 @@ int main(void){
         sockdata = accept(socksvr, (struct sockaddr *)NULL, (socklen_t *)NULL);
 
         if(sockdata < 0){
-            //Log
             printLog("ERROR", "Conexión con el cliente fallida");
             perror("Error en conexión con el cliente\n");
             return ERROR_NO_CONNECT_CLIENT;
@@ -102,21 +100,27 @@ int main(void){
             }
             else{
                 printf("Conexión establecida.\n");
-
                 //¿¿Se podria escribir algun dato del cliente??
-                // if(getpeername(sockdata, (struct sockaddr *)&name, (socklen_t *)&name) < 0){
-                //     // perror("Error al obtener direccion del cliente\n");
-                //     // printLog("ERROR", "Error al obtener direccion del cliente");
-                //     // return ERROR_NOT_FOUND_CLIENT_DATA;
-                // }
-                // else{
-                //     printf("Dirección del cliente: %s:%d\n",
-                //     inet_ntoa(name.sin_addr), ntohs(name.sin_port));
-                // }
 
-                printLog("NOTIFY", "Conexión establecida con el servidor");
+                //int getpeername (int s, struct sockaddr *name , int namelen )
+                //int desc = getpeername(sockdata, (struct sockaddr *)&name, &name_len);
+                //printf("Desc: %d\n", desc);
 
-                //Muestra datos
+                socklen_t name_len = sizeof(name);
+                if(getpeername(sockdata, (struct sockaddr *)&name, &name_len) < 0){
+
+                    perror("Error al obtener direccion del cliente\n");
+                    printLog("ERROR", "Error al obtener direccion del cliente");
+                    return ERROR_NOT_FOUND_CLIENT_DATA;
+                }
+                else{
+                    //Imprime la IP en el log
+                    char log[100];
+                    strcpy(log, "Conexión establecida con el servidor IP Cliente: ");
+                    strcat(log, inet_ntoa(name.sin_addr));
+                    printLog("NOTIFY", log);
+                }
+                //Muestra datos enviados
                 printf("[DATOS] -> %s\n", buffer);
 
                 //Comprueba si el comando recibido es para apagar el servidor   
